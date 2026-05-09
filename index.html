@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简介</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        /* 视频背景 */
+        #bg-video {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+        }
+        /* 视频上方的半透明遮罩 */
+        .overlay {
+            width: 100%;
+            min-height: 100vh;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(4px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .card {
+            width: 700px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 0 50px rgba(100,0,200,0.25);
+            color: #fff;
+        }
+        .exp-badge {
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 6px;
+            color: rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 30px;
+            padding: 6px 18px;
+            margin-bottom: 18px;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+        }
+        .badge-wrap {
+            text-align: center;
+        }
+        .card h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(180,100,255,0.5);
+        }
+        .avatar {
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: block;
+            border: 4px solid rgba(255,255,255,0.4);
+            object-fit: cover;
+        }
+        .info p {
+            font-size: 18px;
+            line-height: 2.2;
+            padding: 6px 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+        .info p span {
+            display: inline-block;
+            width: 80px;
+            color: #c89bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 动态视频背景 -->
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="4K_2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <div class="card">
+            <div class="badge-wrap">
+                <span class="exp-badge">数据通信与网络实验</span>
+            </div>
+            <img src="微信图片_20260507233216_105_23.jpg" class="avatar" alt="头像">
+            <h1>个人简介</h1>
+            <div class="info">
+                <p><span>姓名</span>吴宇航</p>
+                <p><span>学号</span>924110800829</p>
+                <p><span>专业</span>自动化</p>
+                <p><span>爱好</span>旅游、音乐、游戏</p>
+                <p><span>简介</span>我是一名热爱生活的大学生，兴趣广泛，尤其钟情于旅游、音乐与游戏。旅游让我开阔视野——从山川湖海到城市街巷，每一段旅程都是一次新的发现。音乐是我日常的一部分，无论是学习时的轻音乐，还是放松时的流行歌，耳机一戴便有了自己的小世界。游戏则是我放松和社交的方式，在虚拟世界里体验不同的人生，也与朋友们并肩作战。这三样爱好构成了我大学生活中最重要的部分：走出去看看世界，静下来听听内心，坐下来和朋友们一起玩。我相信，热爱生活的人，生活也会回馈以热情。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
